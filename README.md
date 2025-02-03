@@ -1,8 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*Starwars 1*
+Create a React web application that consumes the https://swapi.dev/api/people/ API and displays a dropdown containing a list of Star Wars characters. When a user selects a character from the dropdown, the application should make an API call to fetch the films the character has appeared in and the vehicles they have used, and display them in a table.
