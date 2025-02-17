@@ -1,1 +1,17 @@
+.character-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.character-table th,
+.character-table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.character-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
 
