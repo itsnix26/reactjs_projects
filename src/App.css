@@ -15,3 +15,112 @@
   text-align: left;
 }
 
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+}
+
+.candle {
+  position: relative;
+  width: 30px;
+  height: 120px;
+  background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+  border-radius: 5px;
+  box-shadow: 
+    0 0 15px rgba(255, 255, 255, 0.2),
+    inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.flame {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  width: 14px;
+  height: 35px;
+  background: linear-gradient(to bottom, #ff6b00, #ff9d00);
+  border-radius: 50% 50% 20% 20%;
+  transform-origin: center bottom;
+  transform: translateX(-50%);
+  animation: flicker 1.5s infinite alternate;
+  box-shadow: 
+    0 0 20px #ff6b00,
+    0 0 40px #ff9d00,
+    0 0 60px #ffb700,
+    0 0 80px rgba(255, 183, 0, 0.3);
+}
+
+@keyframes flicker {
+  0%, 100% {
+    transform: translateX(-50%) scaleY(1) rotate(-2deg);
+    opacity: 0.9;
+  }
+  25% {
+    transform: translateX(-50%) scaleY(1.1) rotate(2deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scaleY(0.9) rotate(-1deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateX(-50%) scaleY(1.2) rotate(1deg);
+    opacity: 0.95;
+  }
+}
+
+.wax {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 
+    0 5px 15px rgba(255, 157, 0, 0.2),
+    inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.loading-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.loading-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: loading-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.loading-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.loading-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.loading-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes loading-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
